@@ -1,0 +1,41 @@
+﻿<section id="editpost-view" class="view">
+
+    <span data-bind="visible: !editPostData.redirectToEdit()">Create New Post For:  <span data-bind="text: editPostData.category"></span></span>
+    <span data-bind="visible: editPostData.redirectToEdit()" class="muted">Edit your post:</span>
+    <hr />
+    <form id="savePostForm" class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="title">Title:</label>
+            <div class="controls">
+                <input type="text" class="input-xxlarge" id="title" placeholder="Title" data-bind="value: editPostData.title" required>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="price">Price:</label>
+            <div class="controls">
+                <input type="text" class="input-xxlarge" id="price" placeholder="Price" data-bind="value: editPostData.price" required>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="location">Location:</label>
+            <div class="controls">
+                <input type="text" class="input-xxlarge" id="location" placeholder="Location" data-bind="value: editPostData.location" required>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="description">Description:</label>
+            <div class="controls">
+                <textarea id="description" rows="5" class="input-xxlarge" placeholder="Description" data-bind="value: editPostData.description" required></textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control">
+                <div class="btn-group pull-right">                    
+                    <a class="btn btn-info span2 deleteButton mybtngroup" data-bind="text: !editPostData.redirectToEdit() ? 'Cancel' : 'Delete'"></a>                    
+                    <a class="btn btn-info span2 saveButton mybtngroup">Save</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    <hr />
+</section>

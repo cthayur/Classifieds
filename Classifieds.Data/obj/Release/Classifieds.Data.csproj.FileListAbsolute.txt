@@ -1,0 +1,7 @@
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\bin\Release\Classifieds.Data.dll.config
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\bin\Release\Classifieds.Data.dll
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\bin\Release\Classifieds.Data.pdb
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\bin\Release\EntityFramework.dll
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\bin\Release\EntityFramework.xml
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\obj\Release\Classifieds.Data.dll
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\obj\Release\Classifieds.Data.pdb

@@ -1,0 +1,66 @@
+﻿<section id="mixedbag-view" class="view">
+    <p class="mixedBagHeading">
+        <strong>View the ten newest posts under all categories:</strong>        
+    </p>
+    <div class="accordion span12" id="accordion2" data-bind="foreach: { data: mixedBagItems, as: 'item' }">
+        <!-- ko template: 'accordionTmpl' -->
+        <!-- /ko -->
+    </div>
+
+    @* <div class="accordion span12" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">Collapsible Group Item #1
+                </a>
+            </div>
+            <div id="collapseOne" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                    Anim pariatur cliche...
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Collapsible Group Item #2
+                </a>
+            </div>
+            <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    Anim pariatur cliche...
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+</section>
+
+<script type="text/html" id="accordionTmpl">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" data-bind="text: item.group, attr: { href: '#' + item.id() }"></a>
+        </div>
+        <div class="accordion-body collapse" data-bind="attr: { id: item.id }">
+            <div class="accordion-inner">
+                <div data-bind="foreach: { data: item.items, as: 'subitem' }">
+                    <article class="article_container viewPost">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                <a href="http://www.gravatar.com/2d91df4526a7796b3cc1171583efa34a">
+                                    <img class="img-polaroid" data-bind="attr: { src: subitem.gravatar }" /></a></dt>
+                            <dd>
+                                <div class="row itemsrow">
+                                    <div data-bind="text: subitem.title" class="pull-left" />
+                                    <div data-bind="text: '$' + subitem.price()" class="pull-right" />
+                                </div>
+                                <div class="row itemsrow">
+                                    <div data-bind="text: subitem.location" class="pull-left" />
+                                    <div data-bind="text: subitem.date" class="pull-right" />
+                                </div>
+                            </dd>
+                        </dl>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>

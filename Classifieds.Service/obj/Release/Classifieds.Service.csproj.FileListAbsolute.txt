@@ -1,0 +1,10 @@
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Service\bin\Release\Classifieds.Service.dll.config
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Service\bin\Release\Classifieds.Service.dll
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Service\bin\Release\Classifieds.Service.pdb
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Service\bin\Release\Classifieds.Data.dll
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Service\bin\Release\EntityFramework.dll
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Service\bin\Release\Classifieds.Data.pdb
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Service\bin\Release\EntityFramework.xml
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Service\obj\Release\Classifieds.Service.csprojResolveAssemblyReference.cache
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Service\obj\Release\Classifieds.Service.dll
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Service\obj\Release\Classifieds.Service.pdb

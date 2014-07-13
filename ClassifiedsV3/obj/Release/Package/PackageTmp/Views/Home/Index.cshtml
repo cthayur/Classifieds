@@ -1,0 +1,44 @@
+﻿@model Classifieds.Data.Models.LoginModel
+@{
+    ViewBag.Title = "Classifieds";
+}
+<div id="main-content">
+    @if (@User.Identity.IsAuthenticated)
+    {
+        <p class="error" data-bind="text: error"></p>
+        @Html.AntiForgeryToken()
+        @Html.Hidden("userId",Membership.GetUser().ProviderUserKey.ToString())
+        @Html.Hidden("userName",Membership.GetUser().UserName)
+        @Html.Hidden("emailId",Membership.GetUser().Email)
+        <div>
+            <section class="main">
+                @RenderPage("~/Views/MixedBag.cshtml")
+                @RenderPage("~/Views/Housing.cshtml")
+                @RenderPage("~/Views/Electronics.cshtml")
+                @RenderPage("~/Views/Books.cshtml")
+                @RenderPage("~/Views/HomeGoods.cshtml")
+                @RenderPage("~/Views/Miscellaneous.cshtml")
+                @RenderPage("~/Views/UserPage.cshtml")
+                @RenderPage("~/Views/EditPost.cshtml")
+                @RenderPage("~/Views/ViewPost.cshtml")
+            </section>
+        </div>    
+    }
+    else
+    {
+        <hr />
+        <div id="loginPanel">
+            <section id="socialLoginPanel">
+                <h2>Please log in using your Google account:</h2>
+                @Html.Action("ExternalLoginsList", "Account", new { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+        </div>
+    }
+</div>
+
+@if (@User.Identity.IsAuthenticated)
+{
+    @section scripts {
+        @Scripts.Render("~/bundles/appScripts")
+    }
+}

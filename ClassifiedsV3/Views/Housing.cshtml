@@ -1,0 +1,54 @@
+﻿<section id="housing-view" class="view">
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="span3">
+                    <div class="row create-button">
+                        <a id="createButton" data-bind="click: createPost" class="btn btn-info span3">Create New Post</a>
+                    </div>
+                    <div class="row create-button">
+                        <a id="clearFilter" data-bind="click: clearFilter" class="btn btn-info span3">Clear All Filters</a>
+                    </div>
+                    <ul class="nav nav-list sideNavParent row" data-bind="foreach: uniqueDates">
+                        <li class="sideNavHousing sideNavChild">
+                            <a data-bind="text: $data"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="span9">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-search"></i></span>
+                        <input type="text" id="searchBoxText" class="input-xxlarge" data-bind="value: filterText, valueUpdate: 'afterkeydown'" placeholder="Search under Title, Location & Description..." />
+                    </div>
+                    <div class="input-prepend">
+                        <span class="add-on">$</span>
+                        <input type="text" id="searchBoxPrice" class="input-xxlarge" data-bind="value: filterPrice, valueUpdate: 'afterkeydown'" placeholder="Price less than..." />
+                    </div>
+                    <div data-bind="template: { name: 'items-template', foreach: filteredItems }" class="row-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/html" id="items-template">
+    <article class="article_container viewPost">
+        <a data-bind="attr: { href: postHref }"></a>
+        <dl class="dl-horizontal">
+            <dt>
+                <a href="http://www.gravatar.com/2d91df4526a7796b3cc1171583efa34a">
+                    <img class="img-polaroid" data-bind="attr: { src: gravatar }" /></a></dt>
+            <dd>
+                <div class="row itemsrow">
+                    <div data-bind="text: title" class="pull-left" />
+                    <div data-bind="text: '$' + price()" class="pull-right" />
+                </div>
+                <div class="row itemsrow">
+                    <div data-bind="text: location" class="pull-left" />
+                    <div data-bind="text: date" class="pull-right" />
+                </div>
+            </dd>
+        </dl>
+    </article>
+</script>

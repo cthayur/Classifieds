@@ -1,0 +1,14 @@
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\bin\Debug\Classifieds.Data.dll.config
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\bin\Debug\Classifieds.Data.dll
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\bin\Debug\Classifieds.Data.pdb
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\bin\Debug\EntityFramework.dll
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\bin\Debug\EntityFramework.xml
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\obj\Debug\Classifieds.Data.dll
+C:\Users\chetan.thayur\Documents\Visual Studio 2012\Projects\ClassifiedsV3\Classifieds.Data\obj\Debug\Classifieds.Data.pdb
+D:\Personal Projects\ClassifiedsV3\Classifieds.Data\bin\Debug\Classifieds.Data.dll.config
+D:\Personal Projects\ClassifiedsV3\Classifieds.Data\bin\Debug\Classifieds.Data.dll
+D:\Personal Projects\ClassifiedsV3\Classifieds.Data\bin\Debug\Classifieds.Data.pdb
+D:\Personal Projects\ClassifiedsV3\Classifieds.Data\bin\Debug\EntityFramework.dll
+D:\Personal Projects\ClassifiedsV3\Classifieds.Data\bin\Debug\EntityFramework.xml
+D:\Personal Projects\ClassifiedsV3\Classifieds.Data\obj\Debug\Classifieds.Data.dll
+D:\Personal Projects\ClassifiedsV3\Classifieds.Data\obj\Debug\Classifieds.Data.pdb

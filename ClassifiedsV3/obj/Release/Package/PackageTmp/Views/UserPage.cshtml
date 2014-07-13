@@ -1,0 +1,124 @@
+﻿<section id="userpage-view" class="view">
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="span3">
+                    <ul class="nav nav-list sideNavParent row">
+                        <li id="userPageMessages" class="sideNavUser sideNavChild active">
+                            <a>Messages</a>
+                        </li>
+                        <li id="userPagePosts" class="sideNavUser sideNavChild">
+                            <a>Edit My Posts</a>
+                        </li>
+                        <li id="userPageSubscriptions" class="sideNavUser sideNavChild">
+                            <a>Subscriptions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="span9">
+                    <div id="userMessage-view">
+                        <table class="table table-hover ">
+                            <thead>
+                                <tr>
+                                    <th>Post Id</th>
+                                    <th>Post Title</th>
+                                    <th>Subject</th>
+                                    <th>Date Received</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="template: { name: 'messageRow-template', foreach: messages }">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="userPost-view" hidden>
+                        <div data-bind="template: { name: 'post-template', foreach: posts }" class="row-fluid">
+                        </div>
+                    </div>
+                    <div id ="userSubscriptions-view" hidden>
+                        <span class="text-left">
+                            Subscribe/Unsubscribe to daily emails for each category: 
+                        </span>
+                        <br /><br />
+                        <form class="form-horizontal text-left span12">
+                            <div class="control-group">
+                                <label class="control-label" for="title">Housing :</label>
+                                <div class="controls">
+                                    <a class="btn btn-primary subscriptionLink" data-bind="attr: { id: my.categoryIds.housing }, text: housingSubscribed() == true ? 'Unsubscribe' : 'Subscribe'"></a>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="title">Electronics :</label>
+                                <div class="controls">
+                                    <a class="btn btn-primary subscriptionLink" data-bind="attr: { id: my.categoryIds.electronics }, text: electronicsSubscribed() == true ? 'Unsubscribe' : 'Subscribe'"></a>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="title">Books :</label>
+                                <div class="controls">
+                                    <a class="btn btn-primary subscriptionLink" data-bind="attr: { id: my.categoryIds.books }, text: booksSubscribed() == true ? 'Unsubscribe' : 'Subscribe'"></a>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="title">Home Goods :</label>
+                                <div class="controls">
+                                    <a class="btn btn-primary subscriptionLink" data-bind="attr: { id: my.categoryIds.homegoods }, text: homeGoodsSubscribed() == true ? 'Unsubscribe' : 'Subscribe'"></a>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="title">Miscellaneous :</label>
+                                <div class="controls">
+                                    <a class="btn btn-primary subscriptionLink" data-bind="attr: { id: my.categoryIds.miscellaneous }, text: miscSubscribed() == true ? 'Unsubscribe' : 'Subscribe'"></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/html" id="post-template">
+    <article class="article_container editPost">
+        <a data-bind="attr: { href: postHref }"></a>
+            <dl class="dl-horizontal">
+                <dt>
+                    <a href="http://www.gravatar.com/2d91df4526a7796b3cc1171583efa34a">
+                        <img class="img-polaroid" data-bind="attr: { src: gravatar }" /></a></dt>
+                <dd>
+                    <div class="row itemsrow">
+                        <div data-bind="text: title" class="pull-left" />
+                        <div data-bind="text: '$' + price()" class="pull-right" />
+                    </div>
+                    <div class="row itemsrow">
+                        <div data-bind="text: location" class="pull-left" />
+                        <div data-bind="text: date" class="pull-right" />
+                    </div>
+                </dd>
+            </dl>
+    </article>
+</script>
+
+<div id="userMessageModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <span id="myModalLabel" data-bind="text: messageData.subject"></span>
+    </div>
+    <div class="modal-body">
+        <span id="message" data-bind="text: messageData.message"></span>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>        
+        <button class="btn btn-primary" id="userMessageDelete" data-dismiss="modal">Delete</button>
+        <button class="btn btn-primary" id="userMessageReply" data-dismiss="modal">Reply</button>
+    </div>
+</div>
+
+<script type="text/html" id="messageRow-template">
+    <tr title="Click to view message" class="messageRow">
+        <td><span data-bind="text: postId"></span></td>
+        <td><span data-bind="text: postTitle"></span></td>
+        <td><span data-bind="text: subject"></span></td>
+        <td><span data-bind="text: date"></span></td>
+    </tr>
+</script>

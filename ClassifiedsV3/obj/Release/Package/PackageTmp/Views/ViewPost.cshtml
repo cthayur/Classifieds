@@ -1,0 +1,57 @@
+﻿<section id="viewpost-view" class="view">
+
+    <hr />
+    <form id="viewPostForm" class="form-horizontal text-left span12">
+        <div class="control-group">
+            <label class="control-label" for="title">Title:</label>
+            <div class="controls">
+                <span class="text-left" id="title" data-bind="text: viewPostData.title"></span>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="price">Price:</label>
+            <div class="controls">
+                <span class="text-left" id="price" data-bind="text: '$' + viewPostData.price()"></span>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="location">Location:</label>
+            <div class="controls">
+                <span class="text-left" id="location" data-bind="text: viewPostData.location"></span>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="description">Description:</label>
+            <div class="controls">
+                <textarea id="description" rows="5" class="input-xxlarge displayTextArea" data-bind="value: viewPostData.description" readonly="readonly"></textarea>                
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="control">
+                <!-- ko if: my.isUserAdmin -->
+                <a id="DisablePostBtn" class="btn btn-primary span2">Disable Post</a>
+                <a id="LockUserBtn" class="btn btn-primary span2">Lock User</a>
+                <!-- /ko -->
+                <a href="#messageModal" role="button" class="btn btn-primary pull-right span2 respondButton" data-bind="visible: my.loggedInUserId != viewPostData.UserId()" data-toggle="modal">Respond</a>
+                @*<a class="btn btn-primary span2 respondButton pull-right">Respond</a>*@
+            </div>
+        </div>
+    </form>          
+</section>
+
+<div id="messageModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Reply to this post</h3>
+    </div>
+    <div class="modal-body">
+        <label for="subject">Subject:</label>
+        <input type="text" class="input-xxlarge" id="subject" placeholder="Enter your subject..." data-bind="value: messageData.subject, attr: { readonly: messageData.isSubjectReadoly() }">
+        <label for="message">Message:</label>
+        <textarea id="message" data-bind="value: messageData.message" rows="5" class="input-xxlarge" placeholder="Enter your message..."></textarea>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-primary" id="viewPostmodalSave" data-dismiss="modal">Send Message</button>
+    </div>
+</div>
